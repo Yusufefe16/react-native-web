@@ -7,11 +7,23 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "build": "rm -rf dist/ && webpack --mode=production --config webpack.config.js",
+    "web": "webpack serve --mode=development --config webpack.config.js"
   },
   "dependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "babel-loader": "^10.0.0",
+    "babel-plugin-react-native-web": "^0.19.13",
+    "html-webpack-plugin": "^5.6.3",
     "react": "18.3.1",
-    "react-native": "0.77.0"
+    "react-dom": "^18.3.1",
+    "react-native": "0.77.0",
+    "react-native-web": "^0.19.13",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
